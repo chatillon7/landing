@@ -1,0 +1,68 @@
+.btn-primary, .bg-primary, .text-primary, .border-primary,
+.btn-outline-primary, .active.bg-primary, .active.btn-primary, .show > .btn-primary.dropdown-toggle,
+.btn-primary:focus, .btn-primary:active, .btn-primary:visited, .btn-primary:disabled,
+.navbar.bg-primary, .navbar.bg-primary .navbar-brand, .navbar.bg-primary .nav-link,
+.alert-primary, .badge.bg-primary {
+  background-color: var(--bs-primary) !important;
+  border-color: var(--bs-primary) !important;
+  color: #fff !important;
+}
+.btn-outline-primary {
+  color: var(--bs-primary) !important;
+  border-color: var(--bs-primary) !important;
+  background: transparent !important;
+}
+.btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active {
+  background-color: var(--bs-primary) !important;
+  color: #fff !important;
+  border-color: var(--bs-primary) !important;
+}
+.btn-secondary, .bg-secondary {
+  background-color: var(--bs-secondary) !important;
+  border-color: var(--bs-secondary) !important;
+}
+.text-secondary {
+  color: var(--bs-secondary) !important;
+}
+.btn-success, .bg-success {
+  background-color: var(--bs-success) !important;
+  border-color: var(--bs-success) !important;
+}
+.text-success {
+  color: var(--bs-success) !important;
+}
+.btn-danger, .bg-danger {
+  background-color: var(--bs-danger) !important;
+  border-color: var(--bs-danger) !important;
+}
+.text-danger {
+  color: var(--bs-danger) !important;
+}
+.btn-warning, .bg-warning {
+  background-color: var(--bs-warning) !important;
+  border-color: var(--bs-warning) !important;
+}
+.text-warning {
+  color: var(--bs-warning) !important;
+}
+.btn-info, .bg-info {
+  background-color: var(--bs-info) !important;
+  border-color: var(--bs-info) !important;
+}
+.text-info {
+  color: var(--bs-info) !important;
+}
+.btn-dark, .bg-dark {
+  background-color: var(--bs-dark) !important;
+  border-color: var(--bs-dark) !important;
+}
+.text-dark {
+  color: var(--bs-dark) !important;
+}
+.btn-light, .bg-light {
+  background-color: var(--bs-light) !important;
+  border-color: var(--bs-light) !important;
+}
+.text-light {
+  color: var(--bs-light) !important;
+}

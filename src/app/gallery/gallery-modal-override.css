@@ -1,0 +1,8 @@
+.modal-content {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+.modal-backdrop.show {
+  opacity: 0.8;
+  background: #000;
+}

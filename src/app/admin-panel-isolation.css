@@ -1,0 +1,351 @@
+/* FontAwesome ikonları için zorunlu import kaldırıldı */
+
+/* Admin panelini Bootstrap'ın varsayılan dark teması ile uyumlu hale getirmek için güncellendi */
+
+.admin-panel-root, .admin-panel-root * {
+  /* Bootstrap dark theme variables */
+  --bs-body-bg: #212529;
+  --bs-body-color: #f8f9fa;
+  --bs-primary: #0d6efd;
+  --bs-secondary: #6c757d;
+  --bs-success: #198754;
+  --bs-info: #0dcaf0;
+  --bs-warning: #ffc107;
+  --bs-danger: #dc3545;
+  --bs-light: #f8f9fa;
+  --bs-dark: #212529;
+  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  background-color: var(--bs-body-bg) !important;
+  color: var(--bs-body-color) !important;
+  font-family: var(--bs-font-sans-serif) !important;
+  /* FontAwesome ikonları için font-family override ENGELLENİR */
+}
+
+.admin-panel-root i,
+.admin-panel-root .fa,
+.admin-panel-root .fas,
+.admin-panel-root .far,
+.admin-panel-root .fal,
+.admin-panel-root .fab {
+  font-family: "Font Awesome 6 Free", "Font Awesome 5 Free", "FontAwesome", sans-serif !important;
+  font-weight: 900 !important;
+  font-style: normal !important;
+  font-variant: normal !important;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.admin-panel-root .card,
+.admin-panel-root .modal-content,
+.admin-panel-root .dropdown-menu,
+.admin-panel-root .offcanvas,
+.admin-panel-root .form-control,
+.admin-panel-root .table {
+  background-color: #23272b !important;
+  color: #f8f9fa !important;
+  border-color: #343a40 !important;
+}
+
+.admin-panel-root .btn-primary {
+  background-color: #0d6efd !important;
+  color: #fff !important;
+  border-color: #0d6efd !important;
+}
+.admin-panel-root .btn-primary:hover,
+.admin-panel-root .btn-primary:focus,
+.admin-panel-root .btn-primary:active {
+  background-color: #0b5ed7 !important;
+  border-color: #0a58ca !important;
+  color: #fff !important;
+}
+
+.admin-panel-root .btn-secondary {
+  background-color: #6c757d !important;
+  color: #fff !important;
+  border-color: #6c757d !important;
+}
+.admin-panel-root .btn-secondary:hover,
+.admin-panel-root .btn-secondary:focus,
+.admin-panel-root .btn-secondary:active {
+  background-color: #565e64 !important;
+  border-color: #51585e !important;
+  color: #fff !important;
+}
+
+/* Ekle (success) butonunun rengi Bootstrap'ın yeşili olacak şekilde zorlanır */
+.admin-panel-root .btn-success {
+  background-color: #198754 !important;
+  color: #fff !important;
+  border-color: #198754 !important;
+}
+.admin-panel-root .btn-success:hover,
+.admin-panel-root .btn-success:focus,
+.admin-panel-root .btn-success:active {
+  background-color: #157347 !important;
+  border-color: #146c43 !important;
+  color: #fff !important;
+}
+
+/* Sil butonları: tamamen danger kırmızı arka plan, beyaz yazı */
+.admin-panel-root .btn-danger,
+.admin-panel-root .btn-danger:hover,
+.admin-panel-root .btn-danger:focus,
+.admin-panel-root .btn-danger:active,
+.admin-panel-root .btn-outline-danger,
+.admin-panel-root .btn-outline-danger:hover,
+.admin-panel-root .btn-outline-danger:focus,
+.admin-panel-root .btn-outline-danger:active {
+  background-color: #dc3545 !important;
+  color: #fff !important;
+  border-color: #dc3545 !important;
+}
+
+/* Düzenle (primary) ve Sil (danger) butonları için hover efektleri */
+.admin-panel-root .btn-primary:hover,
+.admin-panel-root .btn-primary:focus {
+  background-color: #0b5ed7 !important;
+  border-color: #0a58ca !important;
+  color: #fff !important;
+}
+
+.admin-panel-root .btn-danger:hover,
+.admin-panel-root .btn-danger:focus,
+.admin-panel-root .btn-outline-danger:hover,
+.admin-panel-root .btn-outline-danger:focus {
+  background-color: #a71d2a !important;
+  border-color: #a71d2a !important;
+  color: #fff !important;
+}
+
+.admin-panel-root .form-control:focus {
+  background-color: #23272b !important;
+  color: #f8f9fa !important;
+  border-color: #0d6efd !important;
+  box-shadow: 0 0 0 0.2rem rgba(13,110,253,.25) !important;
+}
+
+.admin-panel-root .nav-link.active, .admin-panel-root .nav-link:focus, .admin-panel-root .nav-link:hover {
+  color: #0d6efd !important;
+  background-color: #1a1d20 !important;
+}
+
+.admin-panel-root .table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #262b31 !important;
+}
+
+.admin-panel-root .table-hover > tbody > tr:hover {
+  background-color: #1a1d20 !important;
+}
+
+.admin-panel-root .dropdown-menu {
+  background-color: #23272b !important;
+  color: #f8f9fa !important;
+}
+
+/* Modal izolasyonu: Sadece admin paneli teması uygula, diğer tüm stilleri sıfırla */
+.admin-panel-root .modal-dialog,
+.admin-panel-root .modal-content,
+.admin-panel-root .modal-header,
+.admin-panel-root .modal-footer,
+.admin-panel-root .modal-body {
+  background: #23272b !important;
+  color: #f8f9fa !important;
+  font-family: var(--bs-font-sans-serif) !important;
+  border-radius: 0.5rem !important;
+  border: 1px solid #343a40 !important;
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.25);
+  box-sizing: border-box;
+}
+.admin-panel-root .modal-header, .admin-panel-root .modal-footer {
+  background: #23272b !important;
+  color: #f8f9fa !important;
+  border-color: #343a40 !important;
+}
+.admin-panel-root .modal-title {
+  color: #f8f9fa !important;
+  font-weight: 600;
+}
+.admin-panel-root .modal .btn-close {
+  filter: invert(1) grayscale(1);
+}
+.admin-panel-root .modal-content * {
+  background: transparent !important;
+  color: inherit !important;
+  font-family: inherit !important;
+  box-shadow: none !important;
+}
+
+.admin-panel-root .form-label, .admin-panel-root label {
+  color: #f8f9fa !important;
+}
+
+.admin-panel-root .form-check-input:checked {
+  background-color: #0d6efd !important;
+  border-color: #0d6efd !important;
+}
+
+.admin-panel-root .form-check-input {
+  background-color: #23272b !important;
+  border-color: #343a40 !important;
+}
+
+.admin-panel-root .input-group-text {
+  background-color: #23272b !important;
+  color: #f8f9fa !important;
+  border-color: #343a40 !important;
+}
+
+.admin-panel-root .alert {
+  background-color: #23272b !important;
+  color: #f8f9fa !important;
+  border-color: #343a40 !important;
+}
+
+.admin-panel-root .progress-bar {
+  background-color: #0d6efd !important;
+}
+
+.admin-panel-root .nav {
+  background-color: #23272b !important;
+}
+
+.admin-panel-root .sidebar {
+  background-color: #23272b !important;
+  color: #f8f9fa !important;
+}
+
+.admin-panel-root .sidebar .nav-link.active {
+  background-color: #0d6efd !important;
+  color: #fff !important;
+}
+
+.admin-panel-root .list-group-item,
+.admin-panel-root .list-group,
+.admin-panel-root .sidebar {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Menüde Bootstrap'ın varsayılan efektleri kullanılacak, özel hover/active efektler kaldırıldı */
+.admin-panel-root .list-group-item {
+  transition: none;
+  background: none !important;
+  color: inherit !important;
+  box-shadow: none !important;
+  font-weight: 400;
+}
+
+.admin-panel-root .list-group-item:hover,
+.admin-panel-root .list-group-item:focus,
+.admin-panel-root .list-group-item.active {
+  background: #0d6efd !important;
+  color: #fff !important;
+  box-shadow: none !important;
+  font-weight: 500;
+}
+
+.admin-panel-root .list-group-item i {
+  background: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  font-size: 20px !important;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px !important;
+  margin-left: 0 !important;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  color: inherit !important;
+}
+
+/* Scrollbar dark style */
+.admin-panel-root ::-webkit-scrollbar {
+  width: 8px;
+  background: #23272b;
+}
+.admin-panel-root ::-webkit-scrollbar-thumb {
+  background: #343a40;
+  border-radius: 4px;
+}
+
+/* FontAwesome iconlar için kontrast */
+.admin-panel-root .fa, .admin-panel-root .fas, .admin-panel-root .far, .admin-panel-root .fal, .admin-panel-root .fab {
+  color: #f8f9fa !important;
+}
+
+/* FontAwesome SVG ikonlarının admin panelinde görünürlüğünü garanti altına al */
+.admin-panel-root svg[data-icon],
+.admin-panel-root .fa-icon,
+.admin-panel-root svg.fa-svg-icon {
+  color: #f8f9fa !important;
+  fill: currentColor !important;
+  display: inline-block !important;
+  opacity: 1 !important;
+  vertical-align: middle !important;
+  width: 1em;
+  height: 1em;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+
+/* FontAwesome SVG ikonlarının admin panelinde kesinlikle görünmesini sağla */
+.admin-panel-root svg[data-icon] {
+  color: #f8f9fa !important;
+  fill: currentColor !important;
+  display: inline-block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  width: 1em;
+  height: 1em;
+  vertical-align: middle !important;
+}
+
+/* Admin paneli context ve tema değişkenlerinden izole kalmaya devam eder */
+
+/* Yan menü scrollbar'ını gizle */
+.admin-panel-root > .row > .col-md-auto > div {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+.admin-panel-root > .row > .col-md-auto > div::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+/* Admin paneli tablo aksiyon butonları her zaman yatayda kalsın */
+.admin-panel-root table td .btn,
+.admin-panel-root table td .btn-group {
+  margin-bottom: 0 !important;
+  margin-right: 0.5rem;
+  display: inline-block;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.admin-panel-root table td {
+  white-space: nowrap;
+}
+@media (max-width: 600px) {
+  .admin-panel-root table td .btn,
+  .admin-panel-root table td .btn-group {
+    min-width: 2.2rem;
+    font-size: 0.95em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+}
+
+/* Admin paneli renk kutuları izole temadan etkilenmesin */
+.admin-panel-root .theme-color-sample {
+  box-shadow: 0 0 0 1px #ccc;
+  border: none !important;
+  background: inherit !important;
+}
+
+/* ThemeManager renk kutucukları için tam izolasyon istisnası: sadece inline stil geçerli olur, !important ile zorla */
+.theme-color-box-override, .theme-color-box-override * {
+  all: unset !important;
+  box-sizing: border-box !important;
+}

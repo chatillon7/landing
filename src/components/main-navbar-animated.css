@@ -1,0 +1,77 @@
+.main-navbar-nav .nav-link-animated {
+  position: relative;
+  transition: color 0.2s;
+}
+.main-navbar-nav .nav-link-animated.text-muted {
+  color: var(--bs-secondary) !important;
+}
+.main-navbar-nav .nav-link-animated:hover,
+.main-navbar-nav .nav-link-animated.active {
+  color: var(--bs-light) !important;
+}
+.main-navbar-nav .nav-link-animated::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--bs-light), var(--bs-primary));
+  transition: width 0.3s cubic-bezier(.4,0,.2,1);
+}
+.main-navbar-nav .nav-link-animated:hover::after,
+.main-navbar-nav .nav-link-animated.active::after {
+  width: 100%;
+}
+
+.nav-link-primary-dark {
+  /* Modern browsers: primary rengin koyusu */
+  color: color-mix(in srgb, var(--bs-primary), #000 30%) !important;
+  /* Fallback: biraz daha koyu yapmak için filter */
+  filter: brightness(0.7);
+  transition: color 0.2s, filter 0.2s;
+}
+
+.nav-link-animated:hover,
+.nav-link-animated.active {
+  color: var(--bs-light) !important;
+  filter: none;
+}
+
+@keyframes navbarGradientPulse {
+  0% {
+    background: linear-gradient(90deg, var(--bs-light) 0%, var(--bs-light) 30%, var(--bs-primary) 100%);
+  }
+  50% {
+    background: linear-gradient(90deg, var(--bs-light) 0%, var(--bs-light) 10%, var(--bs-primary) 100%);
+  }
+  100% {
+    background: linear-gradient(90deg, var(--bs-light) 0%, var(--bs-light) 30%, var(--bs-primary) 100%);
+  }
+}
+
+.navbar-gradient-animated {
+  background: linear-gradient(90deg, var(--bs-light) 0%, var(--bs-light) 5%, var(--bs-primary) 100%);
+  background-size: 100% 100%;
+  background-position: 0% 0%;
+  animation: navbarGradientSlide 6s ease-in-out infinite;
+}
+
+@keyframes navbarGradientSlide {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 5% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+/* Bootstrap Navbar.Toggle (hamburger) ikonunun focus-border kalınlığını inceltmek için */
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.08rem var(--bs-primary) !important;
+  border-width: 1px !important;
+}
