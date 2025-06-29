@@ -9,6 +9,7 @@ import LinksSection from "../components/LinksSection";
 import { useEffect, useState, useRef } from "react";
 import { getSupabase } from "@/lib/supabaseClient";
 import Features from "@/components/Features";
+import Link from "next/link";
 import { useTheme } from '../context/ThemeContext';
 
 type Content = { id: string; title: string; description: string; image_url?: string; created_at?: string };
@@ -71,6 +72,9 @@ export default function Home() {
                 viewport={{ once: true }}
               >
                 {theme.description}
+                <br />
+                <Link className="btn btn-light btn-lg mt-5" href="/contact">
+                  İletişime Geç</Link>
               </motion.p>
             )}
           </Container>
