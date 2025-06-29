@@ -55,17 +55,36 @@ export default function GalleryPage() {
 									animate={{ opacity: 1, y: 0 }}
 									transition={{ delay: 0.1 + i * 0.05, duration: 0.4 }}
 								>
-									<Card className="shadow-sm h-100">
+									<Card className="shadow-sm h-100" style={{ maxHeight: 360, display: 'flex', flexDirection: 'column' }}>
 										<Card.Img
 											variant="top"
 											src={item.image_url}
 											alt={item.title}
-											style={{ cursor: "pointer" }}
+											style={{
+												cursor: "pointer",
+												objectFit: "cover",
+												width: "100%",
+												height: 160,
+												aspectRatio: '1/1',
+												background: '#f8f9fa',
+												borderRadius: '0.5rem 0.5rem 0 0'
+											}}
 											onClick={() => setModalImg(item.image_url)}
 										/>
-										<Card.Body>
+										<Card.Body style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
 											<Card.Title>{item.title}</Card.Title>
-											<Card.Text>{item.description}</Card.Text>
+											<Card.Text style={{
+												maxHeight: 64,
+												overflow: 'hidden',
+												textOverflow: 'ellipsis',
+												display: '-webkit-box',
+												WebkitLineClamp: 4,
+												WebkitBoxOrient: 'vertical',
+												whiteSpace: 'normal',
+												fontSize: 14
+											}}>
+												{item.description}
+											</Card.Text>
 											<Card.Text className="text-muted small">
 												{" "}
 												{item.date
@@ -89,12 +108,33 @@ export default function GalleryPage() {
 				<Modal.Body className="p-0 text-center" style={{ background: 'transparent', position: 'relative' }}>
 					{modalImg && (
 						<>
+							{/* Açıklama kutusu */}
+							<div style={{
+								position: 'absolute',
+								top: -40,
+								left: '50%',
+								transform: 'translateX(-50%)',
+								zIndex: 20,
+								background: 'rgba(0, 0, 0, 0)',
+								color: '#fff',
+								padding: '8px 20px',
+								borderRadius: 16,
+								maxWidth: '80%',
+								fontSize: 16,
+								fontWeight: 500,
+								boxShadow: '0 2px 8px rgba(0, 0, 0, 0)',
+								pointerEvents: 'none',
+								whiteSpace: 'pre-line',
+							}}>
+								{gallery.find(g => g.image_url === modalImg)?.description || ''}
+							</div>
 							<img
 								src={modalImg}
 								alt="Büyük Görsel"
 								style={{
 									maxWidth: "100%",
 									maxHeight: "80vh",
+									margin: '0',
 									objectFit: "contain",
 									background: 'transparent',
 								}}
